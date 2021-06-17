@@ -1,0 +1,35 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*** BEGIN Restore Tabs in Firefox 89+ ***/
+
+tab {
+    border-right: 1px solid var(--tabs-border-color) !important;
+  }
+
+  tab:hover .tab-background {
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.25) inset !important;
+  }
+
+  tab[selected="true"] .tab-background {
+    box-shadow: 0 2px 0 0 var(--panel-banner-item-info-icon-bgcolor) inset !important;
+  }
+
+  tab .tab-background {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: 0 !important;
+  }
+
+  .tabbrowser-tab {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+
+  /* The 28px are for the compact mode */
+  #navigator-toolbox * {
+    --tab-min-height: 28px !important;
+  }
+
+/*** END Restore Tabs in Firefox 89+ ***/

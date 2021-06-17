@@ -1,0 +1,15 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*** BEGIN Tabbar custimization ***/
+
+  /* Remove the close button, good if you only use the middle mouse button to close tabs */
+  toolbar tabs tab .tab-close-button {
+    display: none;
+  }
+  
+  /* Remove the space at the beginning of the tabbar in window mode */
+  .titlebar-spacer {
+    display: none;
+  }
+
+/*** END Tabbar custimization ***/

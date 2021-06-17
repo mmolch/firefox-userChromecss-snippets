@@ -1,0 +1,141 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*** BEGIN Firefox 77 (June 2, 2020) Override URL bar enlargement ***/
+
+  /* Compute new position, width, and padding */
+
+  #urlbar[breakout][breakout-extend] {
+    top: 3px !important;
+    left: 0px !important;
+    width: 100% !important;
+    padding: 0px !important;
+  }
+  /* for alternate Density settings */
+  [uidensity="compact"] #urlbar[breakout][breakout-extend] {
+    top: 3px !important;
+  }
+  [uidensity="touch"] #urlbar[breakout][breakout-extend] {
+    top: 4px !important;
+  }
+
+  /* Prevent shift of URL bar contents */
+
+  #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+    height: var(--urlbar-height) !important;
+    padding: 0 !important;
+  }
+
+  /* Do not animate */
+
+  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    animation: none !important;;
+  }
+
+  /* Remove shadows */
+
+  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    box-shadow: none !important;
+  }
+
+/*** END Firefox 77 (June 2, 2020) Override URL bar enlargement ***/
+
+
+/*** BEGIN Firefox 89 Tab Restore  ***/
+
+  tab {
+    border-right: 1px solid var(--tabs-border-color) !important;
+  }
+
+  /*tab:first-child {
+    border-left: 1px solid red !important;
+  }*/
+
+  tab:hover .tab-background {
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.25) inset !important;
+  }
+
+  tab[selected="true"] .tab-background {
+    box-shadow: 0 2px 0 0 var(--panel-banner-item-info-icon-bgcolor) inset !important;
+  }
+
+  tab .tab-background {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: 0 !important;
+  }
+
+  .tabbrowser-tab {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+
+  #navigator-toolbox * {
+    --tab-min-height: 28px !important;
+  }
+
+/*** END Firefox 89 Tab Restore  ***/
+
+#navigator-toolbox * {
+  --urlbar-container-height: 32.00px !important;
+  --toolbarbutton-outer-padding: 1px;
+  --toolbarbutton-inner-padding: 6px;
+  --toolbar-start-end-padding: 1px;
+}
+
+
+/*** Tighten up drop-down/context/popup menu spacing ***/
+
+menupopup > menuitem, menupopup > menu {
+  padding-block: 4px !important;
+}
+:root {
+  --arrowpanel-menuitem-padding: 4px 8px !important;
+}
+
+
+toolbar tabs tab .tab-close-button {
+  display: none;
+}
+
+.titlebar-spacer {
+  display: none;
+}
+
+#search-container {
+  padding-block: 0 !important;
+}
+
+#urlbar {
+  top: 3px !important;
+  left: 0px !important;
+  width: 100% !important;
+  padding: 0px !important;
+}
+/* for alternate Density settings */
+[uidensity="compact"] #urlbar {
+  top: 3px !important;
+}
+[uidensity="touch"] #urlbar {
+  top: 4px !important;
+}
+
+/* Prevent shift of URL bar contents */
+
+#urlbar > #urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  padding: 0 !important;
+}
+
+/* Do not animate */
+
+#urlbar > #urlbar-background {
+  animation: none !important;;
+}
+
+/* Remove shadows */
+
+#urlbar > #urlbar-background {
+  box-shadow: none !important;
+}
